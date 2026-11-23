@@ -9,3 +9,7 @@ length-series/alignments/*/
 /results/run/
 /results/measurements-*/
 /visualizations/measurements-*/
+# Cut alignments made by scripts/run_msa_depth.sh (regenerated from the committed ones).
+/msa-depth/alignments-*/
+# Six-protein inference test runs.
+/results/run-*/

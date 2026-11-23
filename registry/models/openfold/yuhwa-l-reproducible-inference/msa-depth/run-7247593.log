@@ -1,0 +1,692 @@
+---------------------------------------
+Begin Slurm Prolog: Nov-22-2026 22:30:25
+Job ID:    7247593
+User ID:   ylee3055
+Account:   coc
+Job name:  run_msa_depth.sh
+Partition: coc-gpu
+QOS:       
+---------------------------------------
+Date: 2026-11-22T22:30:29-05:00  Job: 7247593  Node: atl1-1-03-004-21-0.pace.gatech.edu
+name, memory.total [MiB]
+NVIDIA L40S, 46068 MiB
+9OUF_A/bfd_uniref_hits.a3m: kept 1 sequences
+9OUF_A/mgnify_hits.sto: kept 1 sequences
+9OUF_A/uniref90_hits.sto: kept 1 sequences
+=== 9OUF_A (159 residues) -> /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/results/depth-1/9OUF_A ===
+[2026-11-22 22:32:56,286] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/deepspeed/runtime/zero/linear.py:49: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  def forward(ctx, input, weight, bias=None):
+/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/deepspeed/runtime/zero/linear.py:67: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad_output):
+<frozen importlib._bootstrap_external>:1184: FutureWarning: The cuda.cudart module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.runtime module instead.
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Successfully loaded JAX parameters at /storage/ice1/shared/d-pace_community/alphafold/alphafold_2.3.2_data/params/params_model_1_ptm.npz...
+INFO:/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:Using precomputed alignments for 9OUF_A at /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/alignments-1...
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Running inference for 9OUF_A...
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Inference time: 23.41684215189889
+/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:351: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  lambda x: np.array(x[..., -1].cpu()),
+/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:354: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  out = tensor_tree_map(lambda x: np.array(x.cpu()), out)
+INFO:/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:Output written to /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/results/depth-1/9OUF_A/predictions/9OUF_A_model_1_ptm_unrelaxed.pdb...
+Warning: The default cache directory for DeepSpeed Triton autotune, /home/hice1/ylee3055/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[93m [WARNING] [0m async_io requires the dev libaio .so object and headers but these were not found.
+[93m [WARNING] [0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+
+=== 9OUF_A: ok ===
+     time_s_median: 23.42
+      time_s_first: 23.42
+    peak_alloc_gib: 3.77
+ peak_gpu_used_gib: 6.02
+ gpu_util_mean_pct: 35.4
+        mean_plddt: 77.76
+               ptm: 0.714
+          tm_score: 0.867
+           lddt_ca: 0.83
+           rmsd_ca: 6.18
+9OUF_A/bfd_uniref_hits.a3m: kept 8 sequences
+9OUF_A/mgnify_hits.sto: kept 8 sequences
+9OUF_A/uniref90_hits.sto: kept 8 sequences
+=== 9OUF_A (159 residues) -> /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/results/depth-8/9OUF_A ===
+[2026-11-22 22:36:33,713] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/deepspeed/runtime/zero/linear.py:49: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  def forward(ctx, input, weight, bias=None):
+/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/deepspeed/runtime/zero/linear.py:67: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad_output):
+<frozen importlib._bootstrap_external>:1184: FutureWarning: The cuda.cudart module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.runtime module instead.
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Successfully loaded JAX parameters at /storage/ice1/shared/d-pace_community/alphafold/alphafold_2.3.2_data/params/params_model_1_ptm.npz...
+INFO:/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:Using precomputed alignments for 9OUF_A at /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/alignments-8...
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Running inference for 9OUF_A...
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Inference time: 8.798947566887364
+/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:351: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  lambda x: np.array(x[..., -1].cpu()),
+/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:354: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  out = tensor_tree_map(lambda x: np.array(x.cpu()), out)
+INFO:/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:Output written to /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/results/depth-8/9OUF_A/predictions/9OUF_A_model_1_ptm_unrelaxed.pdb...
+Warning: The default cache directory for DeepSpeed Triton autotune, /home/hice1/ylee3055/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[93m [WARNING] [0m async_io requires the dev libaio .so object and headers but these were not found.
+[93m [WARNING] [0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+
+=== 9OUF_A: ok ===
+     time_s_median: 8.8
+      time_s_first: 8.8
+    peak_alloc_gib: 3.77
+ peak_gpu_used_gib: 6.02
+ gpu_util_mean_pct: 93.2
+        mean_plddt: 86.89
+               ptm: 0.788
+          tm_score: 0.924
+           lddt_ca: 0.891
+           rmsd_ca: 3.59
+9OUF_A/bfd_uniref_hits.a3m: kept 32 sequences
+9OUF_A/mgnify_hits.sto: kept 32 sequences
+9OUF_A/uniref90_hits.sto: kept 32 sequences
+=== 9OUF_A (159 residues) -> /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/results/depth-32/9OUF_A ===
+[2026-11-22 22:36:58,133] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/deepspeed/runtime/zero/linear.py:49: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  def forward(ctx, input, weight, bias=None):
+/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/deepspeed/runtime/zero/linear.py:67: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad_output):
+<frozen importlib._bootstrap_external>:1184: FutureWarning: The cuda.cudart module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.runtime module instead.
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Successfully loaded JAX parameters at /storage/ice1/shared/d-pace_community/alphafold/alphafold_2.3.2_data/params/params_model_1_ptm.npz...
+INFO:/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:Using precomputed alignments for 9OUF_A at /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/alignments-32...
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Running inference for 9OUF_A...
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Inference time: 8.873736741021276
+/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:351: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  lambda x: np.array(x[..., -1].cpu()),
+/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:354: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  out = tensor_tree_map(lambda x: np.array(x.cpu()), out)
+INFO:/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:Output written to /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/results/depth-32/9OUF_A/predictions/9OUF_A_model_1_ptm_unrelaxed.pdb...
+Warning: The default cache directory for DeepSpeed Triton autotune, /home/hice1/ylee3055/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[93m [WARNING] [0m async_io requires the dev libaio .so object and headers but these were not found.
+[93m [WARNING] [0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+
+=== 9OUF_A: ok ===
+     time_s_median: 8.88
+      time_s_first: 8.88
+    peak_alloc_gib: 3.77
+ peak_gpu_used_gib: 6.02
+ gpu_util_mean_pct: 92.9
+        mean_plddt: 89.92
+               ptm: 0.804
+          tm_score: 0.953
+           lddt_ca: 0.94
+           rmsd_ca: 3.16
+9OUF_A/bfd_uniref_hits.a3m: kept 128 sequences
+9OUF_A/mgnify_hits.sto: kept 128 sequences
+9OUF_A/uniref90_hits.sto: kept 128 sequences
+=== 9OUF_A (159 residues) -> /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/results/depth-128/9OUF_A ===
+[2026-11-22 22:37:22,443] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/deepspeed/runtime/zero/linear.py:49: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  def forward(ctx, input, weight, bias=None):
+/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/deepspeed/runtime/zero/linear.py:67: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad_output):
+<frozen importlib._bootstrap_external>:1184: FutureWarning: The cuda.cudart module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.runtime module instead.
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Successfully loaded JAX parameters at /storage/ice1/shared/d-pace_community/alphafold/alphafold_2.3.2_data/params/params_model_1_ptm.npz...
+INFO:/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:Using precomputed alignments for 9OUF_A at /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/alignments-128...
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Running inference for 9OUF_A...
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Inference time: 8.791049509076402
+/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:351: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  lambda x: np.array(x[..., -1].cpu()),
+/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:354: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  out = tensor_tree_map(lambda x: np.array(x.cpu()), out)
+INFO:/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:Output written to /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/results/depth-128/9OUF_A/predictions/9OUF_A_model_1_ptm_unrelaxed.pdb...
+Warning: The default cache directory for DeepSpeed Triton autotune, /home/hice1/ylee3055/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[93m [WARNING] [0m async_io requires the dev libaio .so object and headers but these were not found.
+[93m [WARNING] [0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+
+=== 9OUF_A: ok ===
+     time_s_median: 8.79
+      time_s_first: 8.79
+    peak_alloc_gib: 3.77
+ peak_gpu_used_gib: 6.02
+ gpu_util_mean_pct: 92.8
+        mean_plddt: 90.37
+               ptm: 0.811
+          tm_score: 0.954
+           lddt_ca: 0.941
+           rmsd_ca: 3.16
+6KWC_1/bfd_uniref_hits.a3m: kept 1 sequences
+6KWC_1/mgnify_hits.sto: kept 1 sequences
+6KWC_1/uniref90_hits.sto: kept 1 sequences
+=== 6KWC_1 (191 residues) -> /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/results/depth-1/6KWC_1 ===
+[2026-11-22 22:37:47,290] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/deepspeed/runtime/zero/linear.py:49: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  def forward(ctx, input, weight, bias=None):
+/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/deepspeed/runtime/zero/linear.py:67: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad_output):
+<frozen importlib._bootstrap_external>:1184: FutureWarning: The cuda.cudart module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.runtime module instead.
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Successfully loaded JAX parameters at /storage/ice1/shared/d-pace_community/alphafold/alphafold_2.3.2_data/params/params_model_1_ptm.npz...
+INFO:/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:Using precomputed alignments for 6KWC_1 at /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/alignments-1...
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Running inference for 6KWC_1...
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Inference time: 11.702624366851524
+/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:351: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  lambda x: np.array(x[..., -1].cpu()),
+/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:354: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  out = tensor_tree_map(lambda x: np.array(x.cpu()), out)
+INFO:/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:Output written to /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/results/depth-1/6KWC_1/predictions/6KWC_1_model_1_ptm_unrelaxed.pdb...
+Warning: The default cache directory for DeepSpeed Triton autotune, /home/hice1/ylee3055/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[93m [WARNING] [0m async_io requires the dev libaio .so object and headers but these were not found.
+[93m [WARNING] [0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+
+=== 6KWC_1: ok ===
+     time_s_median: 11.7
+      time_s_first: 11.7
+    peak_alloc_gib: 4.51
+ peak_gpu_used_gib: 7.57
+ gpu_util_mean_pct: 93.4
+        mean_plddt: 96.61
+               ptm: 0.921
+          tm_score: 0.986
+           lddt_ca: 0.98
+           rmsd_ca: 1.0
+6KWC_1/bfd_uniref_hits.a3m: kept 8 sequences
+6KWC_1/mgnify_hits.sto: kept 8 sequences
+6KWC_1/uniref90_hits.sto: kept 8 sequences
+=== 6KWC_1 (191 residues) -> /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/results/depth-8/6KWC_1 ===
+[2026-11-22 22:38:15,803] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/deepspeed/runtime/zero/linear.py:49: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  def forward(ctx, input, weight, bias=None):
+/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/deepspeed/runtime/zero/linear.py:67: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad_output):
+<frozen importlib._bootstrap_external>:1184: FutureWarning: The cuda.cudart module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.runtime module instead.
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Successfully loaded JAX parameters at /storage/ice1/shared/d-pace_community/alphafold/alphafold_2.3.2_data/params/params_model_1_ptm.npz...
+INFO:/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:Using precomputed alignments for 6KWC_1 at /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/alignments-8...
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Running inference for 6KWC_1...
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Inference time: 11.505421890877187
+/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:351: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  lambda x: np.array(x[..., -1].cpu()),
+/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:354: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  out = tensor_tree_map(lambda x: np.array(x.cpu()), out)
+INFO:/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:Output written to /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/results/depth-8/6KWC_1/predictions/6KWC_1_model_1_ptm_unrelaxed.pdb...
+Warning: The default cache directory for DeepSpeed Triton autotune, /home/hice1/ylee3055/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[93m [WARNING] [0m async_io requires the dev libaio .so object and headers but these were not found.
+[93m [WARNING] [0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+
+=== 6KWC_1: ok ===
+     time_s_median: 11.51
+      time_s_first: 11.51
+    peak_alloc_gib: 4.51
+ peak_gpu_used_gib: 7.57
+ gpu_util_mean_pct: 94.3
+        mean_plddt: 97.4
+               ptm: 0.929
+          tm_score: 0.988
+           lddt_ca: 0.984
+           rmsd_ca: 0.94
+6KWC_1/bfd_uniref_hits.a3m: kept 32 sequences
+6KWC_1/mgnify_hits.sto: kept 32 sequences
+6KWC_1/uniref90_hits.sto: kept 32 sequences
+=== 6KWC_1 (191 residues) -> /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/results/depth-32/6KWC_1 ===
+[2026-11-22 22:38:43,595] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/deepspeed/runtime/zero/linear.py:49: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  def forward(ctx, input, weight, bias=None):
+/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/deepspeed/runtime/zero/linear.py:67: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad_output):
+<frozen importlib._bootstrap_external>:1184: FutureWarning: The cuda.cudart module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.runtime module instead.
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Successfully loaded JAX parameters at /storage/ice1/shared/d-pace_community/alphafold/alphafold_2.3.2_data/params/params_model_1_ptm.npz...
+INFO:/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:Using precomputed alignments for 6KWC_1 at /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/alignments-32...
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Running inference for 6KWC_1...
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Inference time: 11.734328090911731
+/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:351: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  lambda x: np.array(x[..., -1].cpu()),
+/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:354: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  out = tensor_tree_map(lambda x: np.array(x.cpu()), out)
+INFO:/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:Output written to /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/results/depth-32/6KWC_1/predictions/6KWC_1_model_1_ptm_unrelaxed.pdb...
+Warning: The default cache directory for DeepSpeed Triton autotune, /home/hice1/ylee3055/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[93m [WARNING] [0m async_io requires the dev libaio .so object and headers but these were not found.
+[93m [WARNING] [0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+
+=== 6KWC_1: ok ===
+     time_s_median: 11.74
+      time_s_first: 11.74
+    peak_alloc_gib: 4.51
+ peak_gpu_used_gib: 7.57
+ gpu_util_mean_pct: 94.9
+        mean_plddt: 97.78
+               ptm: 0.934
+          tm_score: 0.988
+           lddt_ca: 0.983
+           rmsd_ca: 0.95
+6KWC_1/bfd_uniref_hits.a3m: kept 128 sequences
+6KWC_1/mgnify_hits.sto: kept 128 sequences
+6KWC_1/uniref90_hits.sto: kept 128 sequences
+=== 6KWC_1 (191 residues) -> /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/results/depth-128/6KWC_1 ===
+[2026-11-22 22:39:11,704] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/deepspeed/runtime/zero/linear.py:49: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  def forward(ctx, input, weight, bias=None):
+/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/deepspeed/runtime/zero/linear.py:67: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad_output):
+<frozen importlib._bootstrap_external>:1184: FutureWarning: The cuda.cudart module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.runtime module instead.
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Successfully loaded JAX parameters at /storage/ice1/shared/d-pace_community/alphafold/alphafold_2.3.2_data/params/params_model_1_ptm.npz...
+INFO:/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:Using precomputed alignments for 6KWC_1 at /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/alignments-128...
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Running inference for 6KWC_1...
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Inference time: 11.50346606806852
+/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:351: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  lambda x: np.array(x[..., -1].cpu()),
+/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:354: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  out = tensor_tree_map(lambda x: np.array(x.cpu()), out)
+INFO:/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:Output written to /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/results/depth-128/6KWC_1/predictions/6KWC_1_model_1_ptm_unrelaxed.pdb...
+Warning: The default cache directory for DeepSpeed Triton autotune, /home/hice1/ylee3055/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[93m [WARNING] [0m async_io requires the dev libaio .so object and headers but these were not found.
+[93m [WARNING] [0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+
+=== 6KWC_1: ok ===
+     time_s_median: 11.51
+      time_s_first: 11.51
+    peak_alloc_gib: 4.51
+ peak_gpu_used_gib: 7.57
+ gpu_util_mean_pct: 94.7
+        mean_plddt: 97.41
+               ptm: 0.932
+          tm_score: 0.987
+           lddt_ca: 0.98
+           rmsd_ca: 0.96
+9Q5U_A/bfd_uniref_hits.a3m: kept 1 sequences
+9Q5U_A/mgnify_hits.sto: kept 1 sequences
+9Q5U_A/uniref90_hits.sto: kept 1 sequences
+=== 9Q5U_A (325 residues) -> /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/results/depth-1/9Q5U_A ===
+[2026-11-22 22:39:39,479] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/deepspeed/runtime/zero/linear.py:49: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  def forward(ctx, input, weight, bias=None):
+/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/deepspeed/runtime/zero/linear.py:67: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad_output):
+<frozen importlib._bootstrap_external>:1184: FutureWarning: The cuda.cudart module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.runtime module instead.
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Successfully loaded JAX parameters at /storage/ice1/shared/d-pace_community/alphafold/alphafold_2.3.2_data/params/params_model_1_ptm.npz...
+INFO:/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:Using precomputed alignments for 9Q5U_A at /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/alignments-1...
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Running inference for 9Q5U_A...
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Inference time: 27.011909337947145
+/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:351: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  lambda x: np.array(x[..., -1].cpu()),
+/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:354: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  out = tensor_tree_map(lambda x: np.array(x.cpu()), out)
+INFO:/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:Output written to /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/results/depth-1/9Q5U_A/predictions/9Q5U_A_model_1_ptm_unrelaxed.pdb...
+Warning: The default cache directory for DeepSpeed Triton autotune, /home/hice1/ylee3055/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[93m [WARNING] [0m async_io requires the dev libaio .so object and headers but these were not found.
+[93m [WARNING] [0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+
+=== 9Q5U_A: ok ===
+     time_s_median: 27.02
+      time_s_first: 27.02
+    peak_alloc_gib: 10.13
+ peak_gpu_used_gib: 17.49
+ gpu_util_mean_pct: 97.5
+        mean_plddt: 34.93
+               ptm: 0.309
+          tm_score: 0.317
+           lddt_ca: 0.295
+           rmsd_ca: 19.64
+9Q5U_A/bfd_uniref_hits.a3m: kept 8 sequences
+9Q5U_A/mgnify_hits.sto: kept 8 sequences
+9Q5U_A/uniref90_hits.sto: kept 8 sequences
+=== 9Q5U_A (325 residues) -> /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/results/depth-8/9Q5U_A ===
+[2026-11-22 22:40:23,895] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/deepspeed/runtime/zero/linear.py:49: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  def forward(ctx, input, weight, bias=None):
+/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/deepspeed/runtime/zero/linear.py:67: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad_output):
+<frozen importlib._bootstrap_external>:1184: FutureWarning: The cuda.cudart module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.runtime module instead.
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Successfully loaded JAX parameters at /storage/ice1/shared/d-pace_community/alphafold/alphafold_2.3.2_data/params/params_model_1_ptm.npz...
+INFO:/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:Using precomputed alignments for 9Q5U_A at /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/alignments-8...
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Running inference for 9Q5U_A...
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Inference time: 27.007553379051387
+/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:351: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  lambda x: np.array(x[..., -1].cpu()),
+/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:354: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  out = tensor_tree_map(lambda x: np.array(x.cpu()), out)
+INFO:/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:Output written to /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/results/depth-8/9Q5U_A/predictions/9Q5U_A_model_1_ptm_unrelaxed.pdb...
+Warning: The default cache directory for DeepSpeed Triton autotune, /home/hice1/ylee3055/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[93m [WARNING] [0m async_io requires the dev libaio .so object and headers but these were not found.
+[93m [WARNING] [0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+
+=== 9Q5U_A: ok ===
+     time_s_median: 27.01
+      time_s_first: 27.01
+    peak_alloc_gib: 10.13
+ peak_gpu_used_gib: 17.49
+ gpu_util_mean_pct: 97.4
+        mean_plddt: 72.06
+               ptm: 0.719
+          tm_score: 0.766
+           lddt_ca: 0.746
+           rmsd_ca: 4.23
+9Q5U_A/bfd_uniref_hits.a3m: kept 32 sequences
+9Q5U_A/mgnify_hits.sto: kept 32 sequences
+9Q5U_A/uniref90_hits.sto: kept 32 sequences
+=== 9Q5U_A (325 residues) -> /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/results/depth-32/9Q5U_A ===
+[2026-11-22 22:41:07,850] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/deepspeed/runtime/zero/linear.py:49: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  def forward(ctx, input, weight, bias=None):
+/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/deepspeed/runtime/zero/linear.py:67: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad_output):
+<frozen importlib._bootstrap_external>:1184: FutureWarning: The cuda.cudart module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.runtime module instead.
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Successfully loaded JAX parameters at /storage/ice1/shared/d-pace_community/alphafold/alphafold_2.3.2_data/params/params_model_1_ptm.npz...
+INFO:/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:Using precomputed alignments for 9Q5U_A at /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/alignments-32...
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Running inference for 9Q5U_A...
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Inference time: 27.013914776034653
+/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:351: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  lambda x: np.array(x[..., -1].cpu()),
+/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:354: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  out = tensor_tree_map(lambda x: np.array(x.cpu()), out)
+INFO:/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:Output written to /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/results/depth-32/9Q5U_A/predictions/9Q5U_A_model_1_ptm_unrelaxed.pdb...
+Warning: The default cache directory for DeepSpeed Triton autotune, /home/hice1/ylee3055/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[93m [WARNING] [0m async_io requires the dev libaio .so object and headers but these were not found.
+[93m [WARNING] [0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+
+=== 9Q5U_A: ok ===
+     time_s_median: 27.02
+      time_s_first: 27.02
+    peak_alloc_gib: 10.13
+ peak_gpu_used_gib: 17.49
+ gpu_util_mean_pct: 96.6
+        mean_plddt: 86.42
+               ptm: 0.834
+          tm_score: 0.857
+           lddt_ca: 0.844
+           rmsd_ca: 2.94
+9Q5U_A/bfd_uniref_hits.a3m: kept 128 sequences
+9Q5U_A/mgnify_hits.sto: kept 128 sequences
+9Q5U_A/uniref90_hits.sto: kept 128 sequences
+=== 9Q5U_A (325 residues) -> /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/results/depth-128/9Q5U_A ===
+[2026-11-22 22:41:51,567] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/deepspeed/runtime/zero/linear.py:49: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  def forward(ctx, input, weight, bias=None):
+/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/deepspeed/runtime/zero/linear.py:67: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad_output):
+<frozen importlib._bootstrap_external>:1184: FutureWarning: The cuda.cudart module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.runtime module instead.
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Successfully loaded JAX parameters at /storage/ice1/shared/d-pace_community/alphafold/alphafold_2.3.2_data/params/params_model_1_ptm.npz...
+INFO:/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:Using precomputed alignments for 9Q5U_A at /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/alignments-128...
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Running inference for 9Q5U_A...
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Inference time: 27.02570731099695
+/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:351: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  lambda x: np.array(x[..., -1].cpu()),
+/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:354: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  out = tensor_tree_map(lambda x: np.array(x.cpu()), out)
+INFO:/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:Output written to /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/results/depth-128/9Q5U_A/predictions/9Q5U_A_model_1_ptm_unrelaxed.pdb...
+Warning: The default cache directory for DeepSpeed Triton autotune, /home/hice1/ylee3055/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[93m [WARNING] [0m async_io requires the dev libaio .so object and headers but these were not found.
+[93m [WARNING] [0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+
+=== 9Q5U_A: ok ===
+     time_s_median: 27.03
+      time_s_first: 27.03
+    peak_alloc_gib: 10.13
+ peak_gpu_used_gib: 17.49
+ gpu_util_mean_pct: 96.6
+        mean_plddt: 88.73
+               ptm: 0.862
+          tm_score: 0.925
+           lddt_ca: 0.872
+           rmsd_ca: 2.11
+9NXH_A/bfd_uniref_hits.a3m: kept 1 sequences
+9NXH_A/mgnify_hits.sto: kept 1 sequences
+9NXH_A/uniref90_hits.sto: kept 1 sequences
+=== 9NXH_A (500 residues) -> /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/results/depth-1/9NXH_A ===
+[2026-11-22 22:42:44,799] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/deepspeed/runtime/zero/linear.py:49: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  def forward(ctx, input, weight, bias=None):
+/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/deepspeed/runtime/zero/linear.py:67: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad_output):
+<frozen importlib._bootstrap_external>:1184: FutureWarning: The cuda.cudart module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.runtime module instead.
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Successfully loaded JAX parameters at /storage/ice1/shared/d-pace_community/alphafold/alphafold_2.3.2_data/params/params_model_1_ptm.npz...
+INFO:/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:Using precomputed alignments for 9NXH_A at /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/alignments-1...
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Running inference for 9NXH_A...
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Inference time: 60.33800392411649
+/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:351: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  lambda x: np.array(x[..., -1].cpu()),
+/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:354: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  out = tensor_tree_map(lambda x: np.array(x.cpu()), out)
+INFO:/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:Output written to /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/results/depth-1/9NXH_A/predictions/9NXH_A_model_1_ptm_unrelaxed.pdb...
+Warning: The default cache directory for DeepSpeed Triton autotune, /home/hice1/ylee3055/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[93m [WARNING] [0m async_io requires the dev libaio .so object and headers but these were not found.
+[93m [WARNING] [0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+
+=== 9NXH_A: ok ===
+     time_s_median: 60.34
+      time_s_first: 60.34
+    peak_alloc_gib: 20.82
+ peak_gpu_used_gib: 37.37
+ gpu_util_mean_pct: 98.2
+        mean_plddt: 70.78
+               ptm: 0.677
+          tm_score: 0.701
+           lddt_ca: 0.719
+           rmsd_ca: 16.08
+9NXH_A/bfd_uniref_hits.a3m: kept 8 sequences
+9NXH_A/mgnify_hits.sto: kept 8 sequences
+9NXH_A/uniref90_hits.sto: kept 8 sequences
+=== 9NXH_A (500 residues) -> /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/results/depth-8/9NXH_A ===
+[2026-11-22 22:44:12,115] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/deepspeed/runtime/zero/linear.py:49: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  def forward(ctx, input, weight, bias=None):
+/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/deepspeed/runtime/zero/linear.py:67: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad_output):
+<frozen importlib._bootstrap_external>:1184: FutureWarning: The cuda.cudart module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.runtime module instead.
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Successfully loaded JAX parameters at /storage/ice1/shared/d-pace_community/alphafold/alphafold_2.3.2_data/params/params_model_1_ptm.npz...
+INFO:/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:Using precomputed alignments for 9NXH_A at /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/alignments-8...
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Running inference for 9NXH_A...
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Inference time: 60.329722413094714
+/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:351: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  lambda x: np.array(x[..., -1].cpu()),
+/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:354: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  out = tensor_tree_map(lambda x: np.array(x.cpu()), out)
+INFO:/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:Output written to /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/results/depth-8/9NXH_A/predictions/9NXH_A_model_1_ptm_unrelaxed.pdb...
+Warning: The default cache directory for DeepSpeed Triton autotune, /home/hice1/ylee3055/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[93m [WARNING] [0m async_io requires the dev libaio .so object and headers but these were not found.
+[93m [WARNING] [0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+
+=== 9NXH_A: ok ===
+     time_s_median: 60.33
+      time_s_first: 60.33
+    peak_alloc_gib: 20.82
+ peak_gpu_used_gib: 37.37
+ gpu_util_mean_pct: 98.2
+        mean_plddt: 73.31
+               ptm: 0.693
+          tm_score: 0.703
+           lddt_ca: 0.778
+           rmsd_ca: 17.25
+9NXH_A/bfd_uniref_hits.a3m: kept 32 sequences
+9NXH_A/mgnify_hits.sto: kept 32 sequences
+9NXH_A/uniref90_hits.sto: kept 32 sequences
+=== 9NXH_A (500 residues) -> /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/results/depth-32/9NXH_A ===
+[2026-11-22 22:45:39,329] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/deepspeed/runtime/zero/linear.py:49: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  def forward(ctx, input, weight, bias=None):
+/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/deepspeed/runtime/zero/linear.py:67: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad_output):
+<frozen importlib._bootstrap_external>:1184: FutureWarning: The cuda.cudart module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.runtime module instead.
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Successfully loaded JAX parameters at /storage/ice1/shared/d-pace_community/alphafold/alphafold_2.3.2_data/params/params_model_1_ptm.npz...
+INFO:/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:Using precomputed alignments for 9NXH_A at /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/alignments-32...
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Running inference for 9NXH_A...
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Inference time: 60.96894817217253
+/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:351: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  lambda x: np.array(x[..., -1].cpu()),
+/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:354: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  out = tensor_tree_map(lambda x: np.array(x.cpu()), out)
+INFO:/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:Output written to /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/results/depth-32/9NXH_A/predictions/9NXH_A_model_1_ptm_unrelaxed.pdb...
+Warning: The default cache directory for DeepSpeed Triton autotune, /home/hice1/ylee3055/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[93m [WARNING] [0m async_io requires the dev libaio .so object and headers but these were not found.
+[93m [WARNING] [0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+
+=== 9NXH_A: ok ===
+     time_s_median: 60.98
+      time_s_first: 60.98
+    peak_alloc_gib: 20.82
+ peak_gpu_used_gib: 37.37
+ gpu_util_mean_pct: 98.0
+        mean_plddt: 90.5
+               ptm: 0.708
+          tm_score: 0.709
+           lddt_ca: 0.938
+           rmsd_ca: 14.51
+9NXH_A/bfd_uniref_hits.a3m: kept 128 sequences
+9NXH_A/mgnify_hits.sto: kept 128 sequences
+9NXH_A/uniref90_hits.sto: kept 128 sequences
+=== 9NXH_A (500 residues) -> /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/results/depth-128/9NXH_A ===
+[2026-11-22 22:47:07,385] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/deepspeed/runtime/zero/linear.py:49: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  def forward(ctx, input, weight, bias=None):
+/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/deepspeed/runtime/zero/linear.py:67: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad_output):
+<frozen importlib._bootstrap_external>:1184: FutureWarning: The cuda.cudart module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.runtime module instead.
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Successfully loaded JAX parameters at /storage/ice1/shared/d-pace_community/alphafold/alphafold_2.3.2_data/params/params_model_1_ptm.npz...
+INFO:/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:Using precomputed alignments for 9NXH_A at /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/alignments-128...
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Running inference for 9NXH_A...
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Inference time: 60.30295212799683
+/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:351: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  lambda x: np.array(x[..., -1].cpu()),
+/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:354: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  out = tensor_tree_map(lambda x: np.array(x.cpu()), out)
+INFO:/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:Output written to /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/results/depth-128/9NXH_A/predictions/9NXH_A_model_1_ptm_unrelaxed.pdb...
+Warning: The default cache directory for DeepSpeed Triton autotune, /home/hice1/ylee3055/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[93m [WARNING] [0m async_io requires the dev libaio .so object and headers but these were not found.
+[93m [WARNING] [0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+
+=== 9NXH_A: ok ===
+     time_s_median: 60.31
+      time_s_first: 60.31
+    peak_alloc_gib: 20.82
+ peak_gpu_used_gib: 37.37
+ gpu_util_mean_pct: 98.2
+        mean_plddt: 91.52
+               ptm: 0.705
+          tm_score: 0.717
+           lddt_ca: 0.939
+           rmsd_ca: 11.24
+9LB7_A/bfd_uniref_hits.a3m: kept 1 sequences
+9LB7_A/mgnify_hits.sto: kept 1 sequences
+9LB7_A/uniref90_hits.sto: kept 1 sequences
+=== 9LB7_A (777 residues) -> /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/results/depth-1/9LB7_A ===
+[2026-11-22 22:48:41,750] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/deepspeed/runtime/zero/linear.py:49: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  def forward(ctx, input, weight, bias=None):
+/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/deepspeed/runtime/zero/linear.py:67: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad_output):
+<frozen importlib._bootstrap_external>:1184: FutureWarning: The cuda.cudart module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.runtime module instead.
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Successfully loaded JAX parameters at /storage/ice1/shared/d-pace_community/alphafold/alphafold_2.3.2_data/params/params_model_1_ptm.npz...
+INFO:/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:Using precomputed alignments for 9LB7_A at /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/alignments-1...
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Running inference for 9LB7_A...
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Inference time: 160.85962121817283
+/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:351: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  lambda x: np.array(x[..., -1].cpu()),
+/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:354: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  out = tensor_tree_map(lambda x: np.array(x.cpu()), out)
+INFO:/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:Output written to /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/results/depth-1/9LB7_A/predictions/9LB7_A_model_1_ptm_unrelaxed.pdb...
+Warning: The default cache directory for DeepSpeed Triton autotune, /home/hice1/ylee3055/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[93m [WARNING] [0m async_io requires the dev libaio .so object and headers but these were not found.
+[93m [WARNING] [0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+
+=== 9LB7_A: ok ===
+     time_s_median: 160.86
+      time_s_first: 160.86
+    peak_alloc_gib: 25.32
+ peak_gpu_used_gib: 43.9
+ gpu_util_mean_pct: 98.3
+        mean_plddt: 91.57
+               ptm: 0.934
+          tm_score: 0.979
+           lddt_ca: 0.916
+           rmsd_ca: 1.58
+9LB7_A/bfd_uniref_hits.a3m: kept 8 sequences
+9LB7_A/mgnify_hits.sto: kept 8 sequences
+9LB7_A/uniref90_hits.sto: kept 8 sequences
+=== 9LB7_A (777 residues) -> /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/results/depth-8/9LB7_A ===
+[2026-11-22 22:51:59,805] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/deepspeed/runtime/zero/linear.py:49: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  def forward(ctx, input, weight, bias=None):
+/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/deepspeed/runtime/zero/linear.py:67: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad_output):
+<frozen importlib._bootstrap_external>:1184: FutureWarning: The cuda.cudart module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.runtime module instead.
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Successfully loaded JAX parameters at /storage/ice1/shared/d-pace_community/alphafold/alphafold_2.3.2_data/params/params_model_1_ptm.npz...
+INFO:/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:Using precomputed alignments for 9LB7_A at /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/alignments-8...
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Running inference for 9LB7_A...
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Inference time: 160.02822360396385
+/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:351: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  lambda x: np.array(x[..., -1].cpu()),
+/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:354: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  out = tensor_tree_map(lambda x: np.array(x.cpu()), out)
+INFO:/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:Output written to /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/results/depth-8/9LB7_A/predictions/9LB7_A_model_1_ptm_unrelaxed.pdb...
+Warning: The default cache directory for DeepSpeed Triton autotune, /home/hice1/ylee3055/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[93m [WARNING] [0m async_io requires the dev libaio .so object and headers but these were not found.
+[93m [WARNING] [0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+
+=== 9LB7_A: ok ===
+     time_s_median: 160.03
+      time_s_first: 160.03
+    peak_alloc_gib: 25.32
+ peak_gpu_used_gib: 43.9
+ gpu_util_mean_pct: 98.8
+        mean_plddt: 94.52
+               ptm: 0.939
+          tm_score: 0.985
+           lddt_ca: 0.957
+           rmsd_ca: 1.38
+9LB7_A/bfd_uniref_hits.a3m: kept 32 sequences
+9LB7_A/mgnify_hits.sto: kept 32 sequences
+9LB7_A/uniref90_hits.sto: kept 32 sequences
+=== 9LB7_A (777 residues) -> /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/results/depth-32/9LB7_A ===
+[2026-11-22 22:55:16,701] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/deepspeed/runtime/zero/linear.py:49: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  def forward(ctx, input, weight, bias=None):
+/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/deepspeed/runtime/zero/linear.py:67: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad_output):
+<frozen importlib._bootstrap_external>:1184: FutureWarning: The cuda.cudart module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.runtime module instead.
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Successfully loaded JAX parameters at /storage/ice1/shared/d-pace_community/alphafold/alphafold_2.3.2_data/params/params_model_1_ptm.npz...
+INFO:/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:Using precomputed alignments for 9LB7_A at /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/alignments-32...
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Running inference for 9LB7_A...
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Inference time: 160.26315794303082
+/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:351: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  lambda x: np.array(x[..., -1].cpu()),
+/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:354: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  out = tensor_tree_map(lambda x: np.array(x.cpu()), out)
+INFO:/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:Output written to /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/results/depth-32/9LB7_A/predictions/9LB7_A_model_1_ptm_unrelaxed.pdb...
+Warning: The default cache directory for DeepSpeed Triton autotune, /home/hice1/ylee3055/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[93m [WARNING] [0m async_io requires the dev libaio .so object and headers but these were not found.
+[93m [WARNING] [0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+
+=== 9LB7_A: ok ===
+     time_s_median: 160.27
+      time_s_first: 160.27
+    peak_alloc_gib: 25.32
+ peak_gpu_used_gib: 43.9
+ gpu_util_mean_pct: 98.8
+        mean_plddt: 95.73
+               ptm: 0.944
+          tm_score: 0.987
+           lddt_ca: 0.967
+           rmsd_ca: 1.34
+9LB7_A/bfd_uniref_hits.a3m: kept 128 sequences
+9LB7_A/mgnify_hits.sto: kept 128 sequences
+9LB7_A/uniref90_hits.sto: kept 128 sequences
+=== 9LB7_A (777 residues) -> /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/results/depth-128/9LB7_A ===
+[2026-11-22 22:58:34,289] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/deepspeed/runtime/zero/linear.py:49: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  def forward(ctx, input, weight, bias=None):
+/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/deepspeed/runtime/zero/linear.py:67: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad_output):
+<frozen importlib._bootstrap_external>:1184: FutureWarning: The cuda.cudart module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.runtime module instead.
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Successfully loaded JAX parameters at /storage/ice1/shared/d-pace_community/alphafold/alphafold_2.3.2_data/params/params_model_1_ptm.npz...
+INFO:/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:Using precomputed alignments for 9LB7_A at /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/alignments-128...
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Running inference for 9LB7_A...
+INFO:/home/hice1/ylee3055/scratch/.conda/envs/openfold-env/lib/python3.10/site-packages/openfold-2.2.0-py3.10-linux-x86_64.egg/openfold/utils/script_utils.py:Inference time: 160.01690893503837
+/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:351: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  lambda x: np.array(x[..., -1].cpu()),
+/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:354: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  out = tensor_tree_map(lambda x: np.array(x.cpu()), out)
+INFO:/storage/ice1/4/4/ylee3055/openfold/run_pretrained_openfold.py:Output written to /storage/ice1/4/4/ylee3055/fall-2026-vip/cybershuttle-ai4science-foundry/registry/models/openfold/yuhwa-l-reproducible-inference/msa-depth/results/depth-128/9LB7_A/predictions/9LB7_A_model_1_ptm_unrelaxed.pdb...
+Warning: The default cache directory for DeepSpeed Triton autotune, /home/hice1/ylee3055/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[93m [WARNING] [0m async_io requires the dev libaio .so object and headers but these were not found.
+[93m [WARNING] [0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+
+=== 9LB7_A: ok ===
+     time_s_median: 160.02
+      time_s_first: 160.02
+    peak_alloc_gib: 25.32
+ peak_gpu_used_gib: 43.9
+ gpu_util_mean_pct: 98.8
+        mean_plddt: 95.5
+               ptm: 0.944
+          tm_score: 0.991
+           lddt_ca: 0.969
+           rmsd_ca: 1.05
