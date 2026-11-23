@@ -5,6 +5,7 @@ This recipe runs OpenFold structure inference reproducibly on **Georgia Tech PAC
 1. **Setup** (section 1) and **data** (section 2): the environment, then the six proteins with their inputs, alignments, and experimental structures.
 2. **Inference and validation** (sections 3–5): predict all six structures, check each against its experimental structure and the committed results, and render images.
 3. **Baseline measurements** (section 6): inference time, GPU memory, GPU use, and accuracy for all six with OpenFold's default settings, as the starting point for optimization.
+4. **Experiment: MSA depth** (section 8): how much accuracy OpenFold loses when the alignment is cut to 1, 8, 32, or 128 sequences. Details and results in [`msa-depth/README.md`](msa-depth/README.md).
 
 Settings:
 
@@ -332,6 +333,30 @@ The committed alignments come from job 6852413 (2026-11-06, logs in `logs/length
 
 Wall time depends on the shared file system as much as on length. Peak memory stays near 40 GB for every protein, so keep `--mem=64G`. 9OUF and 9Q5U find few related sequences (small folders), which makes them useful low-MSA test cases. A rerun can find slightly different hits if the PACE databases are updated.
 
+## 8. Experiment: how much does OpenFold depend on the MSA?
+
+This proof of concept reruns OpenFold on five of the six proteins (all but 8P5S) with only the first 1, 8, 32, or 128 sequences of each alignment file, with everything else as in section 6, and compares accuracy with the full-alignment baseline. Method, commands, and full results: [`msa-depth/README.md`](msa-depth/README.md).
+
+After sections 1 and 2.1, on a GPU node (about 30 minutes):
+
+```bash
+cd "$RECIPE"
+./scripts/run_msa_depth.sh 9OUF_A 6KWC_1 9Q5U_A 9NXH_A 9LB7_A > msa-depth/run.log 2>&1
+python scripts/summarize_msa_depth.py
+```
+
+TM-score against the experimental structure (job 7247593, one L40S; "full" is the section 6.3 baseline):
+
+| Protein | Depth 1 | 8 | 32 | 128 | Full |
+|---|---|---|---|---|---|
+| 9OUF_A | 0.87 | 0.92 | 0.95 | 0.95 | 0.95 |
+| 6KWC_1 | 0.99 | 0.99 | 0.99 | 0.99 | 0.99 |
+| 9Q5U_A | 0.32 | 0.77 | 0.86 | 0.93 | 0.88 |
+| 9NXH_A | 0.70 | 0.70 | 0.71 | 0.72 | 0.72 |
+| 9LB7_A | 0.98 | 0.98 | 0.99 | 0.99 | 0.99 |
+
+Proteins with a close full-length template (6KWC, 9LB7) are predicted almost as well from the single sequence; 9Q5U, the only one without a real template, collapses to the wrong fold without the alignment and needs about 32–128 sequences to recover. Time does not change with depth, because OpenFold pads the alignment to a fixed size.
+
 ## What was tested
 
 Runs 1–8 below used the recipe's earlier layout, in which 6KWC was predicted and validated first (old sections 3–5) and the other five proteins were added afterwards (old sections 6–7). Section numbers in runs 1–8 refer to that layout. The current section 3 runs the same OpenFold command per protein, with the same settings and template dates as the measurement job (section 6), which gave a 6KWC prediction byte-identical to the original 6KWC run (run 6). `scripts/validate_structure.py` was checked on the committed predictions (`--results results/measurements`, all six PASS, superposed structures byte-identical); the six-protein `run_inference.sh` itself has not yet been run end to end on a GPU.
@@ -415,5 +440,7 @@ rm -rf ~/scratch/openfold                             # the OpenFold checkout
 | `scripts/render_structures.py` | PyMOL images of an inference or measurement run |
 | `scripts/visualize_structure.pml` | PyMOL script for the original 6KWC images in `visualizations/` |
 | `results/measurements/`, `visualizations/measurements/` | Baseline measurements and images (job 6886502) |
+| `scripts/cut_msa.py`, `scripts/run_msa_depth.sh`, `scripts/summarize_msa_depth.py` | MSA-depth experiment: cut alignments, run, summarize (section 8) |
+| `msa-depth/` | MSA-depth experiment: README, results, summary table, plot, log |
 | `logs/` | Environment, GPU, inference, and validation logs |
 | `results/`, `reference/`, `visualizations/` | Reference prediction, experimental structure, images |
